@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/healthidoro/static/css/main.3bccfccd.chunk.css",
+    "main.js": "/healthidoro/static/js/main.4d0a5f3c.chunk.js",
+    "main.js.map": "/healthidoro/static/js/main.4d0a5f3c.chunk.js.map",
+    "runtime-main.js": "/healthidoro/static/js/runtime-main.5a15d106.js",
+    "runtime-main.js.map": "/healthidoro/static/js/runtime-main.5a15d106.js.map",
+    "static/js/2.3d29c7fc.chunk.js": "/healthidoro/static/js/2.3d29c7fc.chunk.js",
+    "static/js/2.3d29c7fc.chunk.js.map": "/healthidoro/static/js/2.3d29c7fc.chunk.js.map",
+    "static/js/3.dc1cf89f.chunk.js": "/healthidoro/static/js/3.dc1cf89f.chunk.js",
+    "static/js/3.dc1cf89f.chunk.js.map": "/healthidoro/static/js/3.dc1cf89f.chunk.js.map",
+    "index.html": "/healthidoro/index.html",
+    "static/css/main.3bccfccd.chunk.css.map": "/healthidoro/static/css/main.3bccfccd.chunk.css.map",
+    "static/js/2.3d29c7fc.chunk.js.LICENSE.txt": "/healthidoro/static/js/2.3d29c7fc.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/healthidoro/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5a15d106.js",
+    "static/js/2.3d29c7fc.chunk.js",
+    "static/css/main.3bccfccd.chunk.css",
+    "static/js/main.4d0a5f3c.chunk.js"
+  ]
+}
