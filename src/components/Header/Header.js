@@ -3,13 +3,17 @@ import { GearIcon, LightBulbIcon } from '@primer/octicons-react';
 import { useState } from 'react';
 import Info from '../Info/Info';
 import Settings from '../Settings/Settings';
+import styles from './Header.module.scss';
 
 const Header = ({handleInfoClick, handleSettingsClick}) => {
 
 
 
   return (
-    <header>
+    <header className={styles.Header}>
+      {/* <source media="(max-width: 799px)" srcset="elva-480w.jpg">
+      <source media="(min-width: 800px)" srcset="elva-800w.jpg">
+      <img src="elva-800w.jpg"> */}
       <img src={logo} alt="logo which is a coral lotus flower" className="logo" />
       <h1>Healthidoro</h1>
 

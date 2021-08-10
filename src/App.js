@@ -22,8 +22,8 @@ function App() {
         handleSettingsClick={() => setIsSettingsOpen(true)}
       />
       <Switch>
-        <Route path='/' component={Healthidoro} exact />
-        <Route path='/pomo' component={Pomobasic} />
+        <Route path="/pomo" component={Pomobasic} />
+        <Route path="/" component={Healthidoro} />
       </Switch>
 
       <Info 

@@ -32,7 +32,6 @@ const Settings = ({open, setOpen}) => {
     <Dialog open={open} onClose={handleClose} aria-labelledby="settings">
       <DialogTitle id="settings">Settings</DialogTitle>
       <form action="">
-        <h3>i am settings</h3>
         <ul>
           <li>
             <label htmlFor="dark-mode">dark mode</label>

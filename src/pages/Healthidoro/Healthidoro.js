@@ -1,9 +1,9 @@
-
+import { pages } from '../pages.module.scss';
 
 const Healthidoro = () => {
   return (
-    <main>
-      <p>healthidoro</p>
+    <main className={pages}>
+      <p>00:00:00</p>
     </main>
   )
 }

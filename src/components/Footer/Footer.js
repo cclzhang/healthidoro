@@ -1,9 +1,11 @@
-
+import styles from './Footer.module.scss';
+import Clock from '../Clock/Clock';
 
 const Footer = () => {
   return (
-    <footer>
-      <p>footer</p>
+    <footer className={styles.Footer}>
+      <Clock />
+      <p>&copy; 2021 <a href="http://cecilezhang.com">xixi</a></p>
     </footer>
   )
 }
