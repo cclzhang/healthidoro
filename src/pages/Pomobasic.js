@@ -1,8 +1,10 @@
-import { pages } from '../pages.module.scss';
+// import { pages } from '../pages.module.scss';
 
 const Pomobasic = () => {
   return (
-    <main className={pages}>
+    <main 
+      // className={pages}
+    >
       <p>pomobasic</p>
     </main>
   )

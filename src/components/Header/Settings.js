@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Dialog, DialogTitle } from '@material-ui/core';
+import SettingsHealthidoro from './SettingsHealthidoro';
+import SettingsPomobasic from './SettingsPomobasic';
 
 
-const Settings = ({open, setOpen}) => {
+const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
 
   const [isInfoOpen, setIsInfoOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -21,7 +23,6 @@ const Settings = ({open, setOpen}) => {
   const [isBreakAlert, setIsBreakAlert] = useState(true);
   const [isAutoBreak, setIsAutoBreak] = useState(true);
   const [isAutoPomo, setIsAutoPomo] = useState(true);
-  const [isStandardWorkday, setIsStandardWorkday] = useState(true);
 
   const buttonHandler = (e, setButtonState, buttonState) => {
     e.preventDefault();
@@ -93,15 +94,18 @@ const Settings = ({open, setOpen}) => {
             </button>
           </li>
           <li>
+            <label htmlFor="change-pomo-type">{isHealthidoro ? "change to Pomobasic" : "change to Healthidoro"}</label>
             <button
-              aria-labelledby="autostart-pomo"
+              aria-labelledby="change-pomo-type"
               role="switch"
               aria-checked="true"
-              onClick={e => buttonHandler(e, setIsStandardWorkday, isStandardWorkday)}
+              onClick={e => buttonHandler(e, setIsHealthidoro, isHealthidoro)}
             >
-              {isStandardWorkday ? "workday = pomos + break" : "workday = pomo only"}
+              <span>on</span>
+              <span>off</span>
             </button>
           </li>
+          {isHealthidoro ? <SettingsHealthidoro /> : <SettingsPomobasic />}
         </ul>
 
         <button type="submit" onClick={e => handleSubmit(e)}>ok</button>

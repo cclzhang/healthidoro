@@ -1,4 +1,4 @@
-
+import styles from './Clock.module.scss';
 import { useEffect, useState } from 'react';
 
 const Clock = () => {
@@ -24,7 +24,7 @@ const Clock = () => {
     return (() => clearInterval(interval))
   }, [clockMin, clockHr])
 
-  return <p className="time">{`${clockHr}:${clockMin}`}</p>;
+  return <p className={`${styles.Clock} clock`}>{`${clockHr}:${clockMin}`}</p>;
 }
 
 export default Clock;

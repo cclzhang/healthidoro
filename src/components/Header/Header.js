@@ -1,16 +1,18 @@
 import logo from '../../assets/healthidoro-logo.png';
 import { GearIcon, LightBulbIcon } from '@primer/octicons-react';
 import { useState } from 'react';
-import Info from '../Info/Info';
-import Settings from '../Settings/Settings';
-import styles from './Header.module.scss';
+import Info from './Info';
+import Settings from './Settings';
+// import styles from './Header.module.scss';
 
 const Header = ({handleInfoClick, handleSettingsClick}) => {
 
 
 
   return (
-    <header className={styles.Header}>
+    <header 
+    // className={styles.Header}
+    >
       {/* <source media="(max-width: 799px)" srcset="elva-480w.jpg">
       <source media="(min-width: 800px)" srcset="elva-800w.jpg">
       <img src="elva-800w.jpg"> */}

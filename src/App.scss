@@ -1,5 +1,12 @@
-@import 'styles/reset';
-@import 'styles/config';
-@import 'styles/global';
-@import 'styles/typography';
-// @import 'components/Footer/Footer.module.scss';
+// all abstracts
+@import 'styles/abstracts/config';
+
+// base
+@import 'styles/base/reset';
+@import 'styles/base/typography';
+@import 'styles/base/global';
+
+// layout
+@import 'styles/layout/header';
+@import 'styles/layout/main';
+@import 'styles/layout/footer';

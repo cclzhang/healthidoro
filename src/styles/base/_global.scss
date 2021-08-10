@@ -17,12 +17,11 @@ body {
 
 button {
   cursor: pointer;
-  background-color: inherit;
+  background-color: $primary-color;
   outline: none;
   border-radius: 5px;
   color: white;
   padding: 10px;
-  font-family: inherit;
 }
 
 a {
