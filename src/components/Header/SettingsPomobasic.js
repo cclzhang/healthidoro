@@ -1,10 +1,11 @@
 
-
+import { Link } from 'react-router-dom';
 
 
 const SettingsPomobasic = () => (
   <li>
     <p>pomodoro settings</p>
+    <Link to='/'>change to Healthidoro</Link>
     <ul>
       <li>
         <input type="text" name="pomoLength" id="pomoLength" disabled />

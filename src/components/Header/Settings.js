@@ -21,8 +21,7 @@ const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
   const [isAutoBreak, setIsAutoBreak] = useState(true);
   const [isAutoPomo, setIsAutoPomo] = useState(true);
 
-  const buttonHandler = (e, setButtonState, buttonState) => {
-    e.preventDefault();
+  const buttonHandler = (setButtonState, buttonState) => {
     setButtonState(!buttonState);
   }
 
@@ -36,7 +35,8 @@ const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
             <button
               aria-labelledby="dark-mode"
               role="switch" aria-checked="true"
-              onClick={e => buttonHandler(e, setIsDarkMode, isDarkMode)}
+              type="button"
+              onClick={() => buttonHandler(setIsDarkMode, isDarkMode)}
             >
               <span>on</span>
               <span>off</span>
@@ -48,7 +48,8 @@ const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
               aria-labelledby="break-music"
               role="switch"
               aria-checked="true"
-              onClick={e => buttonHandler(e, setIsPlayingMusic, isPlayingMusic)}
+              type="button"
+              onClick={() => buttonHandler(setIsPlayingMusic, isPlayingMusic)}
             >
               <span>on</span>
               <span>off</span>
@@ -60,7 +61,8 @@ const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
               aria-labelledby="break-alert"
               role="switch"
               aria-checked="false"
-              onClick={e => buttonHandler(e, setIsBreakAlert, isBreakAlert)}
+              type="button"
+              onClick={() => buttonHandler(setIsBreakAlert, isBreakAlert)}
             >
               <span>on</span>
               <span>off</span>
@@ -72,7 +74,7 @@ const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
               aria-labelledby="autostart-break"
               role="switch"
               aria-checked="true"
-              onClick={e => buttonHandler(e, setIsAutoBreak, isAutoBreak)}
+              onClick={() => buttonHandler(setIsAutoBreak, isAutoBreak)}
             >
               <span>on</span>
               <span>off</span>
@@ -84,24 +86,11 @@ const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
               aria-labelledby="autostart-pomo"
               role="switch"
               aria-checked="true"
-              onClick={e => buttonHandler(e, setIsAutoPomo, isAutoPomo)}
+              onClick={() => buttonHandler(setIsAutoPomo, isAutoPomo)}
             >
               <span>on</span>
               <span>off</span>
             </button>
-          </li>
-          <li>
-            {/* <label htmlFor="change-pomo-type">{isHealthidoro ? "change to Pomobasic" : "change to Healthidoro"}</label>
-            <button
-              aria-labelledby="change-pomo-type"
-              role="switch"
-              aria-checked="true"
-              onClick={e => buttonHandler(e, setIsHealthidoro, isHealthidoro)}
-            >
-              <span>on</span>
-              <span>off</span>
-            </button> */}
-            {isHealthidoro ? <a href="/basic">change to Pomobasic</a> : <a href="/">change to Healthidoro</a>}
           </li>
           {isHealthidoro ? <SettingsHealthidoro /> : <SettingsPomobasic />}
         </ul>

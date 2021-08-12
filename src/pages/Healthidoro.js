@@ -2,9 +2,10 @@ import EmptyTimer from '../components/timer/EmptyTimer';
 import SetTimer from '../components/timer/SetTimer';
 import Timer from '../components/timer/Timer';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Healthidoro = ({ 
+    setIsHealthidoro,
     pomoLength, setPomoLength, 
     breakLengthShort, setBreakLengthShort, 
     breakLengthLong, setBreakLengthLong, 
@@ -16,6 +17,10 @@ const Healthidoro = ({
   const [hrsInit, setHrsInit] = useState('0');
   const [minsInit, setMinsInit] = useState('0');
   const [secsInit, setSecsInit] = useState('0');
+
+  useEffect(() => {
+    setIsHealthidoro(true);
+  })
 
   switch (timerMode) {
     case 'empty':

@@ -30,6 +30,7 @@ function App() {
       <Switch>
         <Route path="/basic" render={() => (
           <Pomobasic
+            setIsHealthidoro={setIsHealthidoro}
             pomoLength={pomoLength}
             setPomoLength={setPomoLength}
             breakLengthShort={breakLengthShort}
@@ -42,6 +43,7 @@ function App() {
         )} />
         <Route path="/" render={() => (
           <Healthidoro 
+            setIsHealthidoro={setIsHealthidoro}
             pomoLength={pomoLength}
             setPomoLength={setPomoLength}
             breakLengthShort={breakLengthShort}
