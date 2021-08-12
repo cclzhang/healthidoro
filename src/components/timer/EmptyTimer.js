@@ -4,7 +4,11 @@ const EmptyTimer = ({setTimerMode}) => {
   // timerModes: 'empty', 'inputting', 'complete', 'break'
   return (
     <main>
-      <TimerDisplay />
+      <TimerDisplay 
+        hrs='0'
+        mins='0'
+        secs='0'
+      />
       <button onClick={() => setTimerMode('inputting')}>add workday</button>
     </main>
   )

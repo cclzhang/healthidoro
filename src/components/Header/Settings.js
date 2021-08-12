@@ -94,7 +94,7 @@ const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
             </button>
           </li>
           <li>
-            <label htmlFor="change-pomo-type">{isHealthidoro ? "change to Pomobasic" : "change to Healthidoro"}</label>
+            {/* <label htmlFor="change-pomo-type">{isHealthidoro ? "change to Pomobasic" : "change to Healthidoro"}</label>
             <button
               aria-labelledby="change-pomo-type"
               role="switch"
@@ -103,7 +103,8 @@ const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
             >
               <span>on</span>
               <span>off</span>
-            </button>
+            </button> */}
+            {isHealthidoro ? <a href="/basic">change to Pomobasic</a> : <a href="/">change to Healthidoro</a>}
           </li>
           {isHealthidoro ? <SettingsHealthidoro /> : <SettingsPomobasic />}
         </ul>
