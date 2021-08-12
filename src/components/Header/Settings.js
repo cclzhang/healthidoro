@@ -6,9 +6,6 @@ import SettingsPomobasic from './SettingsPomobasic';
 
 const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
 
-  const [isInfoOpen, setIsInfoOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-
   const handleClose = () => {
     setOpen(false);
   };

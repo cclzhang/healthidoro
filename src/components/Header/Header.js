@@ -1,13 +1,7 @@
 import logo from '../../assets/healthidoro-logo.png';
 import { GearIcon, LightBulbIcon } from '@primer/octicons-react';
-import { useState } from 'react';
-import Info from './Info';
-import Settings from './Settings';
-// import styles from './Header.module.scss';
 
 const Header = ({handleInfoClick, handleSettingsClick}) => {
-
-
 
   return (
     <header 

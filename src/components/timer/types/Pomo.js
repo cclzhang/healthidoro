@@ -1,4 +1,3 @@
-import TimerDisplay from "../TimerDisplay";
 import TimerStopAlertModal from "../TimerStopAlertModal";
 import { useState, useEffect, Fragment } from "react";
 

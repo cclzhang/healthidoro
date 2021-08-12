@@ -1,4 +1,4 @@
-import { Dialog, DialogTitle, DialogContent, DialogActions} from '@material-ui/core';
+import { Dialog, DialogTitle, DialogActions} from '@material-ui/core';
 
 const TimerStopAlertModal = ({open, setOpen, setTimerMode}) => {
   const handleClose = () => {

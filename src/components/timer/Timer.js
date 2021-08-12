@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Pomo from './types/Pomo';
-import ShortBreak from './types/ShortBreak';
-import LongBreak from './types/LongBreak';
+import Break from './types/Break';
 import TimerDisplay from "./TimerDisplay";
 
 const Timer = ({
@@ -37,16 +36,35 @@ const Timer = ({
           longBreakInterval={longBreakInterval}
         />
       case 'shortBreak':
-        return <ShortBreak
-          timerType={timerType}
-          setTimerType={setTimerType}
-          breakLengthShort={breakLengthShort}
-        />
-      case 'longBreak':
-        return <LongBreak
+        return <Break
           timerType={timerType}
           setTimerType={setTimerType}
           breakLengthLong={breakLengthLong}
+          breakLengthShort={breakLengthShort}
+        />
+      case 'longBreak':
+        return <Break
+          timerType={timerType}
+          setTimerType={setTimerType}
+          breakLengthLong={breakLengthLong}
+          breakLengthShort={breakLengthShort}
+        />
+      default:
+        return <Pomo
+          setTimerMode={setTimerMode}
+          timerType={timerType}
+          setTimerType={setTimerType}
+
+          hrs={hrs}
+          mins={mins}
+          secs={secs}
+          setHrs={setHrs}
+          setMins={setMins}
+          setSecs={setSecs}
+
+          workdayLength={workdayLength}
+          pomoLength={pomoLength}
+          longBreakInterval={longBreakInterval}
         />
     }
   }

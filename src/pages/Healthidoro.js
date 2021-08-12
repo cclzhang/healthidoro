@@ -48,6 +48,10 @@ const Healthidoro = ({
         longBreakInterval={longBreakInterval}
         setLongBreakInterval={setLongBreakInterval}
       />
+    default:
+      return <EmptyTimer
+        setTimerMode={setTimerMode}
+      />
   }
 }
 

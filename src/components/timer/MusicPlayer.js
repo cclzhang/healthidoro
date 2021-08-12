@@ -4,13 +4,12 @@ import longSong from '../../assets/longSong.mp3';
 
 const MusicPlayer = ({timerType}) => {
 
-  const audioEl = useRef(null);
   const [isMuted, setIsMuted] = useState(false);
   const [audioFile, setAudioFile] = useState(shortSong);
+  const audioEl = useRef(null);
 
   useEffect(() => {
     if (timerType === 'shortBreak') {
-      console.log('short audio and break is true')
       fetch(shortSong)
         .then(() => {
           setAudioFile(shortSong);
@@ -22,7 +21,6 @@ const MusicPlayer = ({timerType}) => {
           console.log("this is the short audio error: ", error, "This is audioEl", audioEl.current)
         })
     } else if (timerType === 'longBreak') {
-      console.log('long audio and break is true')
       fetch(longSong)
         .then(() => {
           setAudioFile(longSong);

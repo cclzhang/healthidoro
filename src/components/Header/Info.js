@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Dialog, DialogTitle, DialogContent } from '@material-ui/core';
 
 const Info = ({open, setOpen}) => {
