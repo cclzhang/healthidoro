@@ -1,15 +1,13 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import Pomo from './types/Pomo';
 import Break from './types/Break';
 import TimerDisplay from "./TimerDisplay";
 
 const Timer = ({
-  setTimerMode, 
+  setTimerMode, timerType, setTimerType,
   hrsInit, minsInit, secsInit, 
   pomoLength, breakLengthShort, breakLengthLong, longBreakInterval
 }) => {
-
-  const [timerType, setTimerType] = useState('pomo');
 
   const [hrs, setHrs] = useState(parseInt(hrsInit));
   const [mins, setMins] = useState(parseInt(minsInit));
@@ -70,14 +68,14 @@ const Timer = ({
   }
 
   return (
-    <main>
+    <Fragment>
       <TimerDisplay 
         hrs={hrs}
         mins={mins}
         secs={secs}
       />
       {switchCase(timerType)}
-    </main>
+    </Fragment>
   )
 
 }

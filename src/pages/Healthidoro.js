@@ -1,6 +1,7 @@
 import EmptyTimer from '../components/timer/EmptyTimer';
 import SetTimer from '../components/timer/SetTimer';
 import Timer from '../components/timer/Timer';
+import MusicPlayer from '../components/timer/MusicPlayer';
 
 import { useState, useEffect } from 'react';
 
@@ -17,6 +18,8 @@ const Healthidoro = ({
   const [hrsInit, setHrsInit] = useState('0');
   const [minsInit, setMinsInit] = useState('0');
   const [secsInit, setSecsInit] = useState('0');
+
+  const [timerType, setTimerType] = useState('pomo');
 
   useEffect(() => {
     setIsHealthidoro(true);
@@ -38,21 +41,29 @@ const Healthidoro = ({
         setSecs={setSecsInit}
       />
     case 'complete':
-      return <Timer 
-        setTimerMode={setTimerMode}
-        hrsInit={hrsInit}
-        minsInit={minsInit}
-        secsInit={secsInit}
+      return (
+        <main>
+          <Timer 
+            setTimerMode={setTimerMode}
+            hrsInit={hrsInit}
+            minsInit={minsInit}
+            secsInit={secsInit}
 
-        pomoLength={pomoLength}
-        setPomoLength={setPomoLength}
-        breakLengthShort={breakLengthShort}
-        setBreakLengthShort={setBreakLengthShort}
-        breakLengthLong={breakLengthLong}
-        setBreakLengthLong={setBreakLengthLong}
-        longBreakInterval={longBreakInterval}
-        setLongBreakInterval={setLongBreakInterval}
-      />
+            timerType={timerType}
+            setTimerType={setTimerType}
+
+            pomoLength={pomoLength}
+            setPomoLength={setPomoLength}
+            breakLengthShort={breakLengthShort}
+            setBreakLengthShort={setBreakLengthShort}
+            breakLengthLong={breakLengthLong}
+            setBreakLengthLong={setBreakLengthLong}
+            longBreakInterval={longBreakInterval}
+            setLongBreakInterval={setLongBreakInterval}
+          />
+          {timerType !== 'pomo' ? <MusicPlayer timerType={timerType} /> : null}
+        </main>
+      )
     default:
       return <EmptyTimer
         setTimerMode={setTimerMode}

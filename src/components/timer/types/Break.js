@@ -29,25 +29,20 @@ const Break = ({ timerType, setTimerType, breakLengthLong, breakLengthShort }) =
   }, [timerType, isActive, seconds]);
 
   return (
-    <Fragment>
-      {
-        {
-          'longBreak': (
-            <div>
-              <h4>it's time to go for a walk</h4>
-              <p>{breakLengthLong - seconds}seconds of breaktime left</p>
-            </div>
-          ), 
-          'shortBreak': (
-            <div>
-              <h4>it's time to give your eyes a break</h4>
-              <p>{breakLengthShort - seconds}seconds of breaktime left</p>
-            </div>
-          ), 
-        }[timerType]
-      }
-      <MusicPlayer timerType={timerType} />
-    </Fragment>
+    {
+      'longBreak': (
+        <div>
+          <h4>it's time to go for a walk</h4>
+          <p>{breakLengthLong - seconds}seconds of breaktime left</p>
+        </div>
+      ), 
+      'shortBreak': (
+        <div>
+          <h4>it's time to give your eyes a break</h4>
+          <p>{breakLengthShort - seconds}seconds of breaktime left</p>
+        </div>
+      ), 
+    }[timerType]
   )
 }
 
