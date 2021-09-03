@@ -7,10 +7,8 @@ const Pomobasic = ({setIsHealthidoro}) => {
   })
 
   return (
-    <main 
-      // className={pages}
-    >
-      <p>pomobasic</p>
+    <main>
+      <p>a work in progress...</p>
     </main>
   )
 }

@@ -18,6 +18,15 @@ const SetTimer = ({ setTimerMode, hrs, setHrs, mins, setMins, secs, setSecs }) =
     if (parseInt(hrs) * 3600 + parseInt(mins) * 60 + parseInt(secs) === 0) {
       return alert("please enter a time");
     } 
+
+    if (parseInt(hrs) * 3600 + parseInt(mins) * 60 + parseInt(secs) < 120) {
+      return alert("I'm sure you can work longer than 2 mins");
+    }
+
+    if (parseInt(hrs) * 3600 + parseInt(mins) * 60 + parseInt(secs) > 57600) {
+      return alert("I don't support work hours longer than 16hrs. One you need a break. Two you need to sleep. Three you need a life.");
+    }
+
     setTimerMode('complete');
   }
 

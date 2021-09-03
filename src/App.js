@@ -15,7 +15,7 @@ function App() {
   const [isInfoOpen, setIsInfoOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
-  const [pomoLength, setPomoLength] = useState(2);
+  const [pomoLength, setPomoLength] = useState(5);
   const [breakLengthShort, setBreakLengthShort] = useState(5);
   const [breakLengthLong, setBreakLengthLong] = useState(10);
   const [longBreakInterval, setLongBreakInterval] = useState(3);
@@ -23,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <Header 
+        isHealthidoro={isHealthidoro}
         handleInfoClick={() => setIsInfoOpen(true)} 
         handleSettingsClick={() => setIsSettingsOpen(true)}
       />

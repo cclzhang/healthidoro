@@ -1,6 +1,5 @@
 
-import { useState, useEffect, Fragment } from "react";
-import MusicPlayer from '../MusicPlayer';
+import { useState, useEffect } from "react";
 
 const Break = ({ timerType, setTimerType, breakLengthLong, breakLengthShort }) => {
   const [seconds, setSeconds] = useState(0);

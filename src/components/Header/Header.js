@@ -1,7 +1,7 @@
 import logo from '../../assets/healthidoro-logo.png';
 import { GearIcon, LightBulbIcon } from '@primer/octicons-react';
 
-const Header = ({handleInfoClick, handleSettingsClick}) => {
+const Header = ({isHealthidoro, handleInfoClick, handleSettingsClick}) => {
 
   return (
     <header 
@@ -11,7 +11,9 @@ const Header = ({handleInfoClick, handleSettingsClick}) => {
       <source media="(min-width: 800px)" srcset="elva-800w.jpg">
       <img src="elva-800w.jpg"> */}
       <img src={logo} alt="logo which is a coral lotus flower" className="logo" />
-      <h1>Healthidoro</h1>
+      <h1>
+        {isHealthidoro ? "Healthidoro" : "Pomobasic"}
+      </h1>
 
       <ul>
         <li>

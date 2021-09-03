@@ -18,10 +18,9 @@ const Pomo = ({
   let counter;
 
   useEffect(() => {
-
     if (isActive) {
       interval = setInterval(() => {
-        counter = hrs * 3600 + mins * 60 + secs + 1;
+        counter = hrs * 3600 + mins * 60 + secs - 1;
 
         if ((workdayLength - counter) % (pomoLength * longBreakInterval) === 0 && counter > ((pomoLength * longBreakInterval) * 1.5)) {
           // break every hour and counter is bigger than 1h 30mins
@@ -31,7 +30,7 @@ const Pomo = ({
           // break every 20mins and counter is bigger than 30mins
           setIsActive(!isActive);
           setTimerType('shortBreak');
-        }
+        } 
 
         // clear interval when timer reaches zero
         if (secs + mins + hrs === 0) {

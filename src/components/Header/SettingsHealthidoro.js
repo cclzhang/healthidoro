@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 const SettingsHealthidoro = () => {
   const [isStandardWorkday, setIsStandardWorkday] = useState(true);
-  const buttonHandler = (e, setButtonState, buttonState) => {
+  const changePomoModes = e => {
     e.preventDefault();
-    setButtonState(!buttonState);
+    setIsStandardWorkday(!isStandardWorkday);
   }
 
   return (
     <li>
       <Link to='/basic'>change to pomobasic</Link>
-      <button onClick={e => buttonHandler(e, setIsStandardWorkday, isStandardWorkday)}>
+      <button onClick={changePomoModes}>
         {isStandardWorkday ? "workday = pomos + break" : "workday = pomo only"}
       </button>
     </li>
