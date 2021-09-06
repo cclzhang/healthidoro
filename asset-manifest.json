@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/healthidoro/static/css/main.32a3b9f9.chunk.css",
-    "main.js": "/healthidoro/static/js/main.779ec71b.chunk.js",
-    "main.js.map": "/healthidoro/static/js/main.779ec71b.chunk.js.map",
+    "main.js": "/healthidoro/static/js/main.fdd78540.chunk.js",
+    "main.js.map": "/healthidoro/static/js/main.fdd78540.chunk.js.map",
     "runtime-main.js": "/healthidoro/static/js/runtime-main.394ade25.js",
     "runtime-main.js.map": "/healthidoro/static/js/runtime-main.394ade25.js.map",
     "static/js/2.ca2228b1.chunk.js": "/healthidoro/static/js/2.ca2228b1.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.394ade25.js",
     "static/js/2.ca2228b1.chunk.js",
     "static/css/main.32a3b9f9.chunk.css",
-    "static/js/main.779ec71b.chunk.js"
+    "static/js/main.fdd78540.chunk.js"
   ]
 }
