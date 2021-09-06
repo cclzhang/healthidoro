@@ -6,7 +6,8 @@ import MusicPlayer from '../components/timer/MusicPlayer';
 import { useState, useEffect } from 'react';
 
 const Healthidoro = ({ 
-    setIsHealthidoro,
+    setIsHealthidoro, 
+    isMusicOnBreak, isAutoBreak, isAutoPomo, isBreakAlert,
     pomoLength, setPomoLength, 
     breakLengthShort, setBreakLengthShort, 
     breakLengthLong, setBreakLengthLong, 
@@ -60,8 +61,12 @@ const Healthidoro = ({
             setBreakLengthLong={setBreakLengthLong}
             longBreakInterval={longBreakInterval}
             setLongBreakInterval={setLongBreakInterval}
+
+            isAutoBreak={isAutoBreak}
+            isAutoPomo={isAutoPomo}
+            isBreakAlert={isBreakAlert}
           />
-          {timerType !== 'pomo' ? <MusicPlayer timerType={timerType} /> : null}
+          {timerType !== 'pomo' && isMusicOnBreak === true ? <MusicPlayer timerType={timerType} /> : null}
         </main>
       )
     default:

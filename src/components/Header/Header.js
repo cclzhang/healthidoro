@@ -1,7 +1,9 @@
 import logo from '../../assets/healthidoro-logo.png';
 import { GearIcon, LightBulbIcon } from '@primer/octicons-react';
 
-const Header = ({isHealthidoro, handleInfoClick, handleSettingsClick}) => {
+const Header = ({
+  isHealthidoro, handleInfoClick, handleSettingsClick, 
+}) => {
 
   return (
     <header 

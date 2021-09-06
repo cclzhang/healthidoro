@@ -15,9 +15,14 @@ function App() {
   const [isInfoOpen, setIsInfoOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
-  const [pomoLength, setPomoLength] = useState(5);
-  const [breakLengthShort, setBreakLengthShort] = useState(5);
-  const [breakLengthLong, setBreakLengthLong] = useState(10);
+  const [isMusicOnBreak, setIsMusicOnBreak] = useState(true);
+  const [isAutoBreak, setIsAutoBreak] = useState(true);
+  const [isAutoPomo, setIsAutoPomo] = useState(true);
+  const [isBreakAlert, setIsBreakAlert] = useState(true);
+
+  const [pomoLength, setPomoLength] = useState(3);
+  const [breakLengthShort, setBreakLengthShort] = useState(3);
+  const [breakLengthLong, setBreakLengthLong] = useState(6);
   const [longBreakInterval, setLongBreakInterval] = useState(3);
 
   return (
@@ -53,6 +58,11 @@ function App() {
             setBreakLengthLong={setBreakLengthLong}
             longBreakInterval={longBreakInterval}
             setLongBreakInterval={setLongBreakInterval}
+
+            isMusicOnBreak={isMusicOnBreak}
+            isAutoBreak={isAutoBreak}
+            isAutoPomo={isAutoPomo}
+            isBreakAlert={isBreakAlert}
           />
         )} />
       </Switch>
@@ -69,6 +79,15 @@ function App() {
         setOpen={setIsSettingsOpen}
         isHealthidoro={isHealthidoro}
         setIsHealthidoro={setIsHealthidoro}
+
+        isMusicOnBreak={isMusicOnBreak}
+        setIsMusicOnBreak={setIsMusicOnBreak}
+        isAutoBreak={isAutoBreak}
+        setIsAutoBreak={setIsAutoBreak}
+        isAutoPomo={isAutoPomo}
+        setIsAutoPomo={setIsAutoPomo}
+        isBreakAlert={isBreakAlert}
+        setIsBreakAlert={setIsBreakAlert}
       />
 
       <Footer />

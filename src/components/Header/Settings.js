@@ -4,7 +4,11 @@ import SettingsHealthidoro from './SettingsHealthidoro';
 import SettingsPomobasic from './SettingsPomobasic';
 
 
-const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
+const Settings = ({
+  open, setOpen, isHealthidoro, setIsHealthidoro, 
+  isMusicOnBreak, setIsMusicOnBreak, 
+  isAutoBreak, setIsAutoBreak, isAutoPomo, setIsAutoPomo, isBreakAlert, setIsBreakAlert
+}) => {
 
   const handleClose = () => {
     setOpen(false);
@@ -16,10 +20,7 @@ const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
 
 
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [isPlayingMusic, setIsPlayingMusic] = useState(true);
-  const [isBreakAlert, setIsBreakAlert] = useState(true);
-  const [isAutoBreak, setIsAutoBreak] = useState(true);
-  const [isAutoPomo, setIsAutoPomo] = useState(true);
+
 
   const buttonHandler = (e, setButtonState, buttonState) => {
     e.preventDefault();
@@ -51,7 +52,7 @@ const Settings = ({open, setOpen, isHealthidoro, setIsHealthidoro}) => {
               role="switch"
               aria-checked="true"
               type="button"
-              onClick={e => buttonHandler(e, setIsPlayingMusic, isPlayingMusic)}
+              onClick={e => buttonHandler(e, setIsMusicOnBreak, isMusicOnBreak)}
             >
               <span>on</span>
               <span>off</span>

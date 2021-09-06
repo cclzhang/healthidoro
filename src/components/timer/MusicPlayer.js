@@ -9,7 +9,6 @@ const MusicPlayer = ({timerType}) => {
   const audioEl = useRef(null);
 
   useEffect(() => {
-    console.log(timerType);
     if (timerType === 'shortBreak') {
       fetch(shortSong)
         .then(() => {

@@ -4,10 +4,18 @@ import { useState, useEffect, Fragment } from "react";
 const Pomo = ({
   setTimerMode, timerType, setTimerType, 
   hrs, mins, secs, setHrs, setMins, setSecs, 
-  workdayLength, pomoLength, longBreakInterval
+  workdayLength, pomoLength, longBreakInterval, 
+  isAutoBreak, isBreakAlert, isAutoPomo, 
+  isPomoDone, setIsPomoDone, isBreakDone, setIsBreakDone, 
+  breakType, setBreakType
 }) => {
   const [isStopAlertOpen, setIsStopAlertOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
+
+  const handleGoBreakButton = (e, breakType) => {
+    e.preventDefault();
+    setTimerType(breakType);
+  }
 
   const handleStop = () => {
     setIsActive(false);
@@ -21,15 +29,29 @@ const Pomo = ({
     if (isActive) {
       interval = setInterval(() => {
         counter = hrs * 3600 + mins * 60 + secs - 1;
+        
+        if (isBreakAlert && workdayLength - counter > workdayLength - 3) {
+          console.log(workdayLength - counter)
+        }
 
         if ((workdayLength - counter) % (pomoLength * longBreakInterval) === 0 && counter > ((pomoLength * longBreakInterval) * 1.5)) {
           // break every hour and counter is bigger than 1h 30mins
           setIsActive(!isActive);
-          setTimerType('longBreak')
+          if (isAutoBreak) {
+            setTimerType('longBreak');
+          } else {
+            setIsPomoDone(true);
+            setBreakType('longBreak');
+          }
         } else if ((workdayLength - counter) % pomoLength === 0 && counter > (pomoLength * 1.5)) {
           // break every 20mins and counter is bigger than 30mins
           setIsActive(!isActive);
-          setTimerType('shortBreak');
+          if(isAutoBreak) {
+            setTimerType('shortBreak');
+          } else {
+            setIsPomoDone(true);
+            setBreakType('shortBreak');
+          }
         } 
 
         // clear interval when timer reaches zero
@@ -61,11 +83,18 @@ const Pomo = ({
 
   return (
     <Fragment>
-      <button onClick={() => setIsActive(!isActive)}>
-        {isActive ? "pause" : "play"}
-      </button>
-      <button onClick={handleStop}>stop</button>
-
+      {isPomoDone && !isAutoBreak
+        ? <button onClick={e => handleGoBreakButton(e, breakType)}>go to break</button>
+        : (
+          <Fragment>
+            <button onClick={() => setIsActive(!isActive)}>
+              {isActive ? "pause" : "play"}
+            </button>
+            <button onClick={handleStop}>stop</button>
+          </Fragment>
+          )
+      }
+    
       <TimerStopAlertModal
         open={isStopAlertOpen}
         setOpen={setIsStopAlertOpen}
