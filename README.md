@@ -2,7 +2,7 @@
 
 A pomodoro-style timer app specifically designed to ~~force~~ remind you to relax your eyes and take a walk during your workday as recommended by health professionals.
 
-Copyright &copy; [Cecile Zhang](http://cecilezhang.com). All rights reserved.
+Copyright &copy; [Cecile Zhang](http://cecilezhang.com). Licensed under the [MIT License](./LICENSE). All rights reserved. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
